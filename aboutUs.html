@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .swiper-pagination-bullet {
+        background: none !important; /* Remove background color */
+        width: auto !important; /* Auto width to fit the text */
+        height: auto !important; /* Auto height to fit the text */
+        font-family: "Jost", "sans-serif";
+        font-size: 18px;
+        font-weight: 500;
+        color: #151515;
+        opacity: 0.5;
+        border-radius: 0 !important; /* Remove rounded corners */
+        display: inline-block; /* Display bullets inline */
+        cursor: pointer; /* Show pointer on hover */
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+
+      .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: #151515; /* Fill color */
+        transition: all 0.3s ease; /* Smooth transition */
+      }
+    </style>
+    <title>About Us</title>
+  </head>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black absolute z-[999] w-full top-0 left-0 z-50">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/">
+            <img src="./assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="relative h-screen xl:h-auto overflow-x-hidden">
+      <video
+        autoplay
+        muted
+        loop
+        id="bg-video"
+        poster=""
+        class="h-full xl:h-auto object-cover"
+      >
+        <source src="./assets/videos/hero-section.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content absolute bg-[#15151580] w-full h-full top-0 left-0">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="hero-content h-screen flex flex-col justify-center items-center gap-6"
+          >
+            <div class="hero-content-top flex flex-col items-center gap-4">
+              <span
+                class="font-primary text-lg text-primary-yellow font-medium uppercase"
+                >about us</span
+              >
+              <h1
+                class="font-primary text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] lg:max-w-[65%] text-center"
+              >
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p
+                class="font-secondary font-medium text-lg lg:text-xl text-primary-white max-w-[50%] text-center"
+              >
+                Forward-Thinking, Superior Quality, Integrity, Collaborative
+                Advantage
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- second section -->
+    <section class="bg-primary-white py-24">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col gap-20">
+          <div class="flex flex-col gap-6">
+            <span
+              class="font-primary text-lg text-primary-orange font-medium uppercase"
+              >WHO WE ARE</span
+            >
+            <h2
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium"
+            >
+              Leading Supplier of Solar Solutions
+            </h2>
+            <p class="font-secondary text-primary-black max-w-[72%]">
+              Established in 2012, we are a National High-tech Enterprise with
+              strong R&D strengths that integrates R&D, production, sales and
+              service as one, and has been authorized over 100 national patents
+              since establishment including more than 30 invention patents.
+              SolaX products have been granted more than 500 international
+              mainstream market certifications until now.
+            </p>
+          </div>
+
+          <div class="flex gap-5">
+            <div><img src="./assets/about_us/abtUs_1.png" alt="abtUs_1" /></div>
+            <div class="grow">
+              <img src="./assets/about_us/abtUs_2.png" alt="abtUs_2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- third section -->
+    <section
+      class="h-screen bg-[url('./assets/about_us/abtUs_3.webp')] bg-cover bg-no-repeat bg-bottom"
+    >
+      <div
+        class="w-full h-full bg-[url('./assets/about_us/bg-linear-gradient.svg')] py-24"
+      >
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-3">
+            <h2
+              class="font-primary text-4xl lg:text-6xl lg:leading-[70px] text-primary-white font-medium"
+            >
+              Our Mission
+            </h2>
+            <p class="font-secondary text-primary-white max-w-[22%]">
+              Innovating accurately and swiftly to ensure a sustainable, greener
+              future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- forth section -->
+    <section class="py-24 bg-primary-white">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col gap-16">
+          <div class="flex flex-col gap-4">
+            <span
+              class="font-primary text-lg text-primary-orange font-medium uppercase"
+              >GLOBAL REACH</span
+            >
+            <h2
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black max-w-[60%]"
+            >
+              Global Leader in Smart Energy Solutions
+            </h2>
+            <p class="font-secondary text-primary-black max-w-[75%]">
+              SolaX Power envisions a clean, sustainable future powered by solar
+              energy. As a global leader in solar solutions and Asia's first
+              hybrid inverter manufacturer, SolaX has grown into a multinational
+              corporation with over 2,000 employees, including more than 800 in
+              research and development, in just a decade. Headquartered in
+              Hangzhou, China, with branches in the Netherlands, Germany, UK,
+              Australia, Japan, and the US, SolaX sells products in over 80
+              countries.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div>
+              <img src="./assets/about_us/abtUs_4.webp" alt="abtUs_4" />
+            </div>
+            <div
+              class="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] flex items-end pb-10"
+            >
+              <div class="absolute right-8 top-8">
+                <img
+                  width="42"
+                  height="42"
+                  src="./assets/homepage_4.svg"
+                  alt="Solax_Logo"
+                />
+              </div>
+
+              <ul class="flex justify-between w-2/3 mx-auto">
+                <li class="flex flex-col items-center gap-2">
+                  <div>
+                    <img
+                      src="./assets/about_us/employees.svg"
+                      alt="employees"
+                    />
+                  </div>
+                  <div>
+                    <h4
+                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                    >
+                      2000+
+                    </h4>
+                    <p class="font-secondary text-primary-white text-center">
+                      Employees
+                    </p>
+                  </div>
+                </li>
+                <li class="flex flex-col items-center gap-2">
+                  <div>
+                    <img
+                      src="./assets/about_us/searching.svg"
+                      alt="searching"
+                    />
+                  </div>
+                  <div>
+                    <h4
+                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                    >
+                      400+
+                    </h4>
+                    <p class="font-secondary text-primary-white text-center">
+                      R&D Staff
+                    </p>
+                  </div>
+                </li>
+                <li class="flex flex-col items-center gap-2">
+                  <div>
+                    <img src="./assets/about_us/building.svg" alt="building" />
+                  </div>
+                  <div>
+                    <h4
+                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                    >
+                      4
+                    </h4>
+                    <p class="font-secondary text-primary-white text-center">
+                      R&D Centers
+                    </p>
+                  </div>
+                </li>
+                <li class="flex flex-col items-center gap-2">
+                  <div>
+                    <img src="./assets/about_us/web.svg" alt="web" />
+                  </div>
+                  <div>
+                    <h4
+                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                    >
+                      80+
+                    </h4>
+                    <p
+                      class="font-secondary text-primary-white text-center font-light"
+                    >
+                      Global Markets
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- fifth section -->
+    <section class="py-24">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col gap-24">
+          <div class="flex flex-col items-center gap-4">
+            <span
+              class="font-primary text-lg text-primary-orange font-medium uppercase"
+              >Truly Global</span
+            >
+            <h2
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-white"
+            >
+              Headquarter & Branches
+            </h2>
+          </div>
+
+          <div class="relative">
+            <div>
+              <img src="./assets/about_us/abtUs_map.svg" alt="abtUs_map" />
+            </div>
+            <ul>
+              <li class="absolute top-[24%] left-[130px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute top-[18%] left-[520px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute top-[20%] left-[550px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute top-[23%] left-[580px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute top-[36%] right-[310px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute top-[32%] right-[245px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="absolute bottom-[14%] right-[135px] group">
+                <div
+                  class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div class="w-3 h-3 bg-primary-black rounded-full"></div>
+                </div>
+
+                <div
+                  class="flex flex-col items-center absolute -top-[80px] -left-[90px] origin-bottom transition-all duration-500 ease-in-out scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100"
+                >
+                  <div
+                    class="px-2 py-2.5 rounded-full bg-gradient-to-r from-[#EEBB0C] to-[#EF6818]"
+                  >
+                    <span
+                      class="whitespace-nowrap font-secondary text-primary-black"
+                      >Hangzhou, China (HQ)</span
+                    >
+                  </div>
+                  <div>
+                    <img
+                      width="35"
+                      height="45"
+                      src="./assets/about_us/mapVector.svg"
+                      alt="mapVector"
+                    />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sixth section -->
+    <section class="py-24 bg-primary-white">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col gap-20">
+          <div class="flex flex-col items-center gap-6">
+            <span
+              class="font-primary text-lg text-primary-orange font-medium uppercase"
+              >pushing ahead</span
+            >
+            <h2
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center max-w-[40%]"
+            >
+              Our Journey in Energy Storage
+            </h2>
+          </div>
+
+          <div class="bg-[#F5F5F5] border border-[#C8C8C8] p-10">
+            <div class="swiper slider">
+              <!-- 1 -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2012
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 2 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2013
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 3 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2014
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 4 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2015
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 5 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2016
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 6 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2017
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 7 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2018
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 8 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2019
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 9 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2020
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 10 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2021
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+                <!-- 11 -->
+                <div class="swiper-slide flex justify-between">
+                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                    <p
+                      class="font-secondary font-medium text-lg text-primary-black"
+                    >
+                      Establishment of SolaX Power Subsidiary in Netherlands.
+                      SolaX Featured On BBC Royal Institution Lectures. The
+                      second generation of X-Hybrid was released.
+                    </p>
+
+                    <h2
+                      class="font-primary font-medium text-[120px] text-primary-black opacity-20"
+                    >
+                      2022
+                    </h2>
+                  </div>
+
+                  <div>
+                    <img
+                      src="./assets/about_us/abtUsSliderImg.png"
+                      alt="abtUsSliderImg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Separate pagination elements for progress bar and bullets -->
+              <div
+                class="swiper-pagination-progressbar swiper-pagination !static mt-10"
+              ></div>
+              <div
+                class="swiper-pagination-bullets swiper-pagination !static !w-full flex justify-between mt-10"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="pt-24">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+          <div class="flex justify-center">
+            <a href="/">
+              <img src="./assets/footer_logo.svg" alt="footer_logo" />
+            </a>
+          </div>
+
+          <ul
+            class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+          >
+            <li class="flex flex-col gap-8">
+              <span
+                class="font-primary text-primary-white text-base font-medium"
+                >Company</span
+              >
+
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >About Solax</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey">News</a>
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Success Stories</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey">Events</a>
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sustainability</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="flex flex-col gap-8">
+              <span
+                class="font-primary text-primary-white text-base font-medium"
+                >Solutions</span
+              >
+
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Energy Storage System</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Residential</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Commercial & Industrial</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >EV Charger</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Smart Energy Management</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="flex flex-col gap-8">
+              <span
+                class="font-primary text-primary-white text-base font-medium"
+                >Services</span
+              >
+
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Downloads</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Find a Distributor
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Global Contacts</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Warranty Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Warranty Registration</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="flex flex-col gap-8">
+              <span
+                class="font-primary text-primary-white text-base font-medium"
+                >Upgrade</span
+              >
+
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >SolaX Cloud</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >SolaX Design</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Webinar</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-16">
+          <div
+            class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+          ></div>
+          <div
+            class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+          >
+            <ul class="flex gap-5">
+              <li>
+                <a href="">
+                  <img src="./assets/instagram.svg" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/fb.svg" alt="fb" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/yt.svg" alt="yt" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/twitter.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/linkedin.svg" alt="linkedin" />
+                </a>
+              </li>
+            </ul>
+
+            <ul class="flex gap-5">
+              <li>
+                <a href="" class="font-secondary text-primary-grey">Sitemap</a>
+              </li>
+              <li>
+                <a href="" class="font-secondary text-primary-grey"
+                  >Terms of Use</a
+                >
+              </li>
+              <li>
+                <a href="" class="font-secondary text-primary-grey"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+
+            <p class="font-secondary text-primary-grey">
+              Copyright @SolaX Power
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
