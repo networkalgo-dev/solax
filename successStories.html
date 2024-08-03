@@ -16,10 +16,916 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .tab-content {
+        display: none;
+        width: 100%;
+        top: 0;
+      }
+      .tab-content.active {
+        display: block;
+        animation: tabAnimation 0.5s ease-in-out;
+      }
+      @keyframes tabAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
     <title>Success Stories</title>
   </head>
-  <body>
-    <h1 class="text-primary-yellow">Success Stories</h1>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black absolute z-[999] w-full top-0 left-0 z-50">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/solax">
+            <img src="./assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a
+                  class="font-primary text-primary-white font-medium"
+                  href="/solax/installer.html"
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+
+    <main>
+      <!-- hero section -->
+      <section class="relative h-screen xl:h-auto overflow-x-hidden">
+        <video
+          autoplay
+          muted
+          loop
+          id="bg-video"
+          poster=""
+          class="h-full xl:h-auto object-cover"
+        >
+          <source src="./assets/videos/hero-section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="content absolute bg-[#15151580] w-full h-full top-0 left-0">
+          <div
+            class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+          >
+            <div
+              class="hero-content h-screen flex flex-col justify-center items-center gap-6"
+            >
+              <div class="hero-content-top flex flex-col items-center gap-4">
+                <span
+                  class="font-primary text-lg text-primary-yellow font-medium uppercase"
+                  >SolaX Power</span
+                >
+                <h1
+                  class="font-primary font-medium text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] text-center drop-shadow-2xl"
+                >
+                  Success Stories
+                </h1>
+              </div>
+
+              <div
+                class="hero-content-btm flex flex-col lg:flex-row items-center justify-center gap-4 max-w-[80%] md:max-w-none"
+              >
+                <button
+                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto"
+                >
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section -->
+      <section class="py-24 bg-primary-white">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex gap-6">
+            <!-- tab links -->
+            <div class="grow flex flex-col">
+              <button
+                data-tab="pv-inverter"
+                class="tab-link px-4 py-6 bg-[#C8C8C83D] border-b border-[#C8C8C8] w-full text-left font-secondary text-lg text-primary-black transition-all duration-500 bg-primary-black text-primary-yellow"
+              >
+                PV Inverter
+              </button>
+              <button
+                data-tab="energy-storage"
+                class="tab-link px-4 py-6 bg-[#C8C8C83D] border-b border-[#C8C8C8] w-full text-left font-secondary text-lg text-primary-black transition-all duration-500"
+              >
+                Energy Storage System
+              </button>
+              <button
+                data-tab="ev-charger"
+                class="tab-link px-4 py-6 bg-[#C8C8C83D] w-full text-left font-secondary text-lg text-primary-black transition-all duration-500"
+              >
+                EV Charger
+              </button>
+            </div>
+
+            <!-- tab-content -->
+            <div class="relative w-[75%]">
+              <!-- tab-1 -->
+              <div id="pv-inverter" class="tab-content w-full active">
+                <ul class="grid grid-cols-3 gap-6">
+                  <li class="group">
+                    <a href="">
+                      <div>
+                        <img src="./assets/installer/tab1.png" alt="tabImg" />
+                      </div>
+                      <div class="border-x border-b border-[#C8C8C8]">
+                        <div class="p-4 flex justify-between">
+                          <span class="font-primary text-primary-black"
+                            >Uzbekistan</span
+                          >
+                          <div
+                            class="origin-center rotate-45 transition-all duration-300 group-hover:rotate-0"
+                          >
+                            <img
+                              src="./assets/ArrowCircleUpRight.svg"
+                              alt="ArrowCircleUpRight"
+                            />
+                          </div>
+                        </div></div
+                    ></a>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab2.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>UK</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- tab-2 -->
+              <div id="energy-storage" class="tab-content w-full">
+                <ul class="grid grid-cols-3 gap-6">
+                  <li class="group">
+                    <a href="">
+                      <div>
+                        <img src="./assets/installer/tab1.png" alt="tabImg" />
+                      </div>
+                      <div class="border-x border-b border-[#C8C8C8]">
+                        <div class="p-4 flex justify-between">
+                          <span class="font-primary text-primary-black"
+                            >Uzbekistan</span
+                          >
+                          <div
+                            class="origin-center rotate-45 transition-all duration-300 group-hover:rotate-0"
+                          >
+                            <img
+                              src="./assets/ArrowCircleUpRight.svg"
+                              alt="ArrowCircleUpRight"
+                            />
+                          </div>
+                        </div></div
+                    ></a>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab2.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>UK</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- tab-3 -->
+              <div id="ev-charger" class="tab-content">
+                <ul class="grid grid-cols-3 gap-6">
+                  <li class="group">
+                    <a href="">
+                      <div>
+                        <img src="./assets/installer/tab1.png" alt="tabImg" />
+                      </div>
+                      <div class="border-x border-b border-[#C8C8C8]">
+                        <div class="p-4 flex justify-between">
+                          <span class="font-primary text-primary-black"
+                            >Uzbekistan</span
+                          >
+                          <div
+                            class="origin-center rotate-45 transition-all duration-300 group-hover:rotate-0"
+                          >
+                            <img
+                              src="./assets/ArrowCircleUpRight.svg"
+                              alt="ArrowCircleUpRight"
+                            />
+                          </div>
+                        </div></div
+                    ></a>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab2.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>UK</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab3.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>New Zealand</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="./assets/installer/tab4.png" alt="tabImg" />
+                    </div>
+                    <div class="border-x border-b border-[#C8C8C8]">
+                      <a
+                        href=""
+                        class="p-4 font-primary text-primary-black flex justify-between"
+                      >
+                        <span>Australia</span>
+
+                        <img
+                          src="./assets/ArrowCircleUpRight.svg"
+                          alt="ArrowCircleUpRight"
+                        />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- third section -->
+      <section class="py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-2">
+              <span
+                class="font-primary text-lg text-primary-orange font-medium text-center uppercase"
+                >Testimonials</span
+              >
+              <h2
+                class="font-primary text-4xl lg:text-6xl lg:leading-[70px] text-primary-white font-medium text-center"
+              >
+                What our Customer says
+              </h2>
+            </div>
+
+            <ul class="grid grid-cols-3 gap-6">
+              <li class="border border-[#C8C8C83D]">
+                <div
+                  class="bg-[url('./assets/successStories/customer_1.png')] bg-cover bg-no-repeat h-[260px]"
+                >
+                  <div
+                    class="h-full w-full bg-gradient-to-b from-[#15151500] to-[#151515] px-[14px] pb-4 flex flex-col justify-end"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col">
+                        <span class="font-primary font-medium text-white"
+                          >Brad Cumbers</span
+                        >
+                        <span class="font-secondary text-primary-white text-sm"
+                          >Co-founder & CEO Martialytics</span
+                        >
+                      </div>
+                      <div>
+                        <img
+                          src="./assets/successStories/playIcon.svg"
+                          alt="playIcon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="border border-[#C8C8C83D]">
+                <div
+                  class="bg-[url('./assets/successStories/customer_2.png')] bg-cover bg-no-repeat h-[260px]"
+                >
+                  <div
+                    class="h-full w-full bg-gradient-to-b from-[#15151500] to-[#151515] px-[14px] pb-4 flex flex-col justify-end"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col">
+                        <span class="font-primary font-medium text-white"
+                          >Jude Cornish</span
+                        >
+                        <span class="font-secondary text-primary-white text-sm"
+                          >Homeowner</span
+                        >
+                      </div>
+                      <div>
+                        <img
+                          src="./assets/successStories/playIcon.svg"
+                          alt="playIcon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="border border-[#C8C8C83D]">
+                <div
+                  class="bg-[url('./assets/successStories/customer_3.png')] bg-cover bg-no-repeat h-[260px]"
+                >
+                  <div
+                    class="h-full w-full bg-gradient-to-b from-[#15151500] to-[#151515] px-[14px] pb-4 flex flex-col justify-end"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col">
+                        <span class="font-primary font-medium text-white"
+                          >Justin Veenema</span
+                        >
+                        <span class="font-secondary text-primary-white text-sm"
+                          >Homeowner</span
+                        >
+                      </div>
+                      <div>
+                        <img
+                          src="./assets/successStories/playIcon.svg"
+                          alt="playIcon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- sixth section -->
+      <section>
+        <div
+          class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+          >
+            <div class="flex flex-col gap-10 lg:max-w-[35%]">
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="font-primary text-4xl font-medium text-primary-black"
+                >
+                  Join Our Newsletter
+                </h3>
+                <p class="font-secondary text-primary-black">
+                  Keep yourself updated with latest news and updates
+                </p>
+              </div>
+
+              <form action="">
+                <div
+                  class="flex py-2.5 pr-2.5 pl-[18px] bg-white rounded-full flex justify-between"
+                >
+                  <input
+                    class="font-primary text-primary-black grow text-base"
+                    type="text"
+                    placeholder="Enter your email"
+                  /><button
+                    class="bg-primary-yellow py-4 px-6 rounded-full flex items-center gap-2 font-medium"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <img
+                      class="hidden lg:inline-block"
+                      src="./assets/ArrowLeft.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <img src="./assets/homepage_4.svg" alt="homepage_4" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="pt-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+            <div class="flex justify-center">
+              <a href="/solax">
+                <img src="./assets/footer_logo.svg" alt="footer_logo" />
+              </a>
+            </div>
+
+            <ul
+              class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+            >
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Company</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/solax/aboutUs.html"
+                      class="font-secondary text-primary-grey"
+                      >About Solax</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/successStories.html"
+                      class="font-secondary text-primary-grey"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Sustainability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Solutions</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Energy Storage System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Commercial & Industrial</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >EV Charger</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Smart Energy Management</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Services</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Find a Distributor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Global Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Registration</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Upgrade</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Cloud</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Design</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Webinar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-16">
+            <div
+              class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+            ></div>
+            <div
+              class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+            >
+              <ul class="flex items-center gap-5">
+                <li>
+                  <a href="">
+                    <img src="./assets/instagram.svg" alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/fb.svg" alt="fb" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/yt.svg" alt="yt" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/twitter.svg" alt="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/linkedin.svg" alt="linkedin" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="flex gap-5">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sitemap</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+
+              <p class="font-secondary text-primary-grey">
+                Copyright @SolaX Power
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
     <script src="./tailwindConfig.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const tab = link.getAttribute("data-tab");
+
+            tabLinks.forEach((link) =>
+              link.classList.remove(
+                "text-primary-yellow",
+                "border-primary-black",
+                "bg-primary-black",
+                "font-bold"
+              )
+            );
+            link.classList.add(
+              "text-primary-yellow",
+              "border-primary-black",
+              "bg-primary-black",
+              "font-bold"
+            );
+
+            tabContents.forEach((content) => {
+              content.classList.remove("active");
+              if (content.getAttribute("id") === tab) {
+                content.classList.add("active");
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
