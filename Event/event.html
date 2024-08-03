@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .tab-content {
+        display: none;
+        width: 100%;
+        top: 0;
+      }
+      .tab-content.active {
+        display: block;
+        animation: tabAnimation 0.5s ease-in-out;
+      }
+      @keyframes tabAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <title>Event</title>
+  </head>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/solax">
+            <img src="../assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a
+                  class="font-primary text-primary-white font-medium"
+                  href="/solax/installer.html"
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- first section -->
+      <section class="relative h-screen xl:h-auto overflow-x-hidden">
+        <video
+          autoplay
+          muted
+          loop
+          id="bg-video"
+          poster=""
+          class="h-full xl:h-auto object-cover"
+        >
+          <source src="../assets/videos/hero-section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="content absolute bg-[#15151580] w-full h-full top-0 left-0">
+          <div
+            class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+          >
+            <div
+              class="hero-content h-screen flex flex-col items-center gap-6 pt-60"
+            >
+              <div class="hero-content-top flex flex-col items-center gap-4">
+                <span
+                  class="font-primary text-lg text-primary-yellow font-medium uppercase"
+                  >SolaX Power</span
+                >
+                <h1
+                  class="font-primary text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] text-center"
+                >
+                  Events
+                </h1>
+                <p
+                  class="font-secondary font-medium text-lg lg:text-xl text-primary-white text-center"
+                >
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section -->
+      <section class="py-24 bg-primary-white">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-12">
+            <!-- tab Link -->
+            <div class="flex">
+              <button
+                data-tab="upcoming-events"
+                class="tab-link py-4 border-b-2 border-[#444444] font-secondary text-3xl w-full border-primary-yellow"
+              >
+                Upcoming Events
+              </button>
+              <button
+                data-tab="past-events"
+                class="tab-link py-4 border-b-2 border-[#444444] font-secondary text-3xl w-full"
+              >
+                Past Events
+              </button>
+            </div>
+
+            <!-- tab-content -->
+            <div>
+              <!-- tab-1 -->
+              <div id="upcoming-events" class="tab-content active">
+                <ul class="grid grid-cols-3 gap-x-6 gap-y-10">
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_1.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_2.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img src="../assets/events/video.svg" alt="lvideo" />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Online</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_3.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_4.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_5.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_6.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- tab_2 content -->
+              <div id="past-events" class="tab-content">
+                <ul class="grid grid-cols-3 gap-x-6 gap-y-10">
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_1.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_2.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img src="../assets/events/video.svg" alt="lvideo" />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Online</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_3.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_4.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_5.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/events/event_6.png" alt="event_1" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="font-primary text-xl font-medium text-primary-black"
+                      >
+                        The event title goes here.
+                      </h3>
+
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/calendar-silhouette.svg"
+                            alt="calendar"
+                          />
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >August 8 | 9:30pm - August 9 | 2:30am</span
+                          >
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="../assets/events/location_icon.svg"
+                            alt="location_icon"
+                          />
+
+                          <span class="font-secondary text-[#444444] font-bold"
+                            >Hangzhou, China</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-center pt-16">
+              <button
+                class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto"
+              >
+                <span>More Events</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sixth section -->
+      <section class="py-24">
+        <div
+          class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+          >
+            <div class="flex flex-col gap-10 lg:max-w-[35%]">
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="font-primary text-4xl font-medium text-primary-black"
+                >
+                  Join Our Newsletter
+                </h3>
+                <p class="font-secondary text-primary-black">
+                  Keep yourself updated with latest news and updates
+                </p>
+              </div>
+
+              <form action="">
+                <div
+                  class="flex py-2.5 pr-2.5 pl-[18px] bg-white rounded-full flex justify-between"
+                >
+                  <input
+                    class="font-primary text-primary-black grow text-base"
+                    type="text"
+                    placeholder="Enter your email"
+                  /><button
+                    class="bg-primary-yellow py-4 px-6 rounded-full flex items-center gap-2 font-medium"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <img
+                      class="hidden lg:inline-block"
+                      src="../assets/ArrowLeft.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <img src="../assets/homepage_4.svg" alt="homepage_4" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="pt-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+            <div class="flex justify-center">
+              <a href="/solax">
+                <img src="../assets/footer_logo.svg" alt="footer_logo" />
+              </a>
+            </div>
+
+            <ul
+              class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+            >
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Company</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/solax/aboutUs.html"
+                      class="font-secondary text-primary-grey"
+                      >About Solax</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/successStories.html"
+                      class="font-secondary text-primary-grey"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/Event/event.html"
+                      class="font-secondary text-primary-grey"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Sustainability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Solutions</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Energy Storage System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Commercial & Industrial</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >EV Charger</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Smart Energy Management</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Services</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Find a Distributor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Global Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Registration</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Upgrade</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Cloud</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Design</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Webinar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-16">
+            <div
+              class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+            ></div>
+            <div
+              class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+            >
+              <ul class="flex items-center gap-5">
+                <li>
+                  <a href="">
+                    <img src="../assets/instagram.svg" alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/fb.svg" alt="fb" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/yt.svg" alt="yt" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/twitter.svg" alt="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/linkedin.svg" alt="linkedin" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="flex gap-5">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sitemap</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+
+              <p class="font-secondary text-primary-grey">
+                Copyright @SolaX Power
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="../tailwindConfig.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const tab = link.getAttribute("data-tab");
+
+            tabLinks.forEach((link) =>
+              link.classList.remove("border-primary-yellow", "font-bold")
+            );
+            link.classList.add("border-primary-yellow", "font-bold");
+
+            tabContents.forEach((content) => {
+              content.classList.remove("active");
+              if (content.getAttribute("id") === tab) {
+                content.classList.add("active");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
