@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>News</title>
+  </head>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black absolute z-[999] w-full top-0 left-0 z-50">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/solax">
+            <img src="../assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a
+                  class="font-primary text-primary-white font-medium"
+                  href="/solax/installer.html"
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+
+    <main>
+      <!-- first section -->
+      <section
+        class="bg-[url('../assets/news/news_bg.png')] bg-cover bg-no-repeat h-screen"
+      >
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto h-full"
+        >
+          <div class="flex justify-center items-center h-full">
+            <div class="hero-content-top flex flex-col items-center gap-4">
+              <h1
+                class="font-primary text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] text-center"
+              >
+                SolaX News
+              </h1>
+              <p
+                class="font-secondary font-medium text-lg lg:text-xl text-primary-white text-center max-w-[56%]"
+              >
+                Stay informed with our up-to-the-minute news coverage. From
+                breaking stories to in-depth analysis, we bring you the latest
+                developments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section -->
+      <section class="bg-primary-white py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto h-full"
+        >
+          <div class="flex flex-col gap-16">
+            <!-- for filter categories -->
+            <div>
+              <ul class="flex items-center gap-4">
+                <li>
+                  <a
+                    href=""
+                    class="px-6 py-2 bg-primary-orange rounded-full font-secondary font-medium text-primary-white"
+                    >All</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="px-6 py-2 rounded-full font-secondary font-medium text-primary-black"
+                    >Company News</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="px-6 py-2 rounded-full font-secondary font-medium text-primary-black"
+                    >Product Updates</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- blog_list -->
+            <div>
+              <ul class="grid grid-cols-3 gap-x-4 gap-y-8">
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_1.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Company News</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_2.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Product Updates</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_3.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Company News</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_4.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Product Updates</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_5.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Company News</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex flex-col gap-4"
+                    href="/solax/news/newsInner.html"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div>
+                        <img src="../assets/blog/blog_1.png" alt="blog_pic" />
+                      </div>
+                      <div class="flex gap-4 items-center">
+                        <span
+                          class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                          >Product Updates</span
+                        >
+                        <span class="font-secondary text-xs text-primary-black"
+                          >June 21, 2024</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <h3
+                        class="font-primary font-medium text-2xl text-primary-black"
+                      >
+                        SolaX Power Secures Placement on Mosaic and Sungage
+                        Approved Vendor List
+                      </h3>
+
+                      <p class="font-secondary font-medium text-[#444444]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam pulvinar nisi ut orci placerat...
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- more blog -->
+            <div class="flex justify-center">
+              <button
+                class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto"
+              >
+                <span>More News</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- third section -->
+      <section class="py-24">
+        <div
+          class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+          >
+            <div class="flex flex-col gap-10 lg:max-w-[35%]">
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="font-primary text-4xl font-medium text-primary-black"
+                >
+                  Join Our Newsletter
+                </h3>
+                <p class="font-secondary text-primary-black">
+                  Keep yourself updated with latest news and updates
+                </p>
+              </div>
+
+              <form action="">
+                <div
+                  class="flex py-2.5 pr-2.5 pl-[18px] bg-white rounded-full flex justify-between"
+                >
+                  <input
+                    class="font-primary text-primary-black grow text-base"
+                    type="text"
+                    placeholder="Enter your email"
+                  /><button
+                    class="bg-primary-yellow py-4 px-6 rounded-full flex items-center gap-2 font-medium"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <img
+                      class="hidden lg:inline-block"
+                      src="../assets/ArrowLeft.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <img src="../assets/homepage_4.svg" alt="homepage_4" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="pt-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+            <div class="flex justify-center">
+              <a href="/solax">
+                <img src="../assets/footer_logo.svg" alt="footer_logo" />
+              </a>
+            </div>
+
+            <ul
+              class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+            >
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Company</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/solax/aboutUs.html"
+                      class="font-secondary text-primary-grey"
+                      >About Solax</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/successStories.html"
+                      class="font-secondary text-primary-grey"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/Event/event.html"
+                      class="font-secondary text-primary-grey"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Sustainability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Solutions</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Energy Storage System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Commercial & Industrial</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >EV Charger</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Smart Energy Management</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Services</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Find a Distributor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Global Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Registration</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Upgrade</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Cloud</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Design</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Webinar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-16">
+            <div
+              class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+            ></div>
+            <div
+              class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+            >
+              <ul class="flex items-center gap-5">
+                <li>
+                  <a href="">
+                    <img src="../assets/instagram.svg" alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/fb.svg" alt="fb" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/yt.svg" alt="yt" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/twitter.svg" alt="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/linkedin.svg" alt="linkedin" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="flex gap-5">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sitemap</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+
+              <p class="font-secondary text-primary-grey">
+                Copyright @SolaX Power
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="../tailwindConfig.js"></script>
+  </body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog inner page</title>
+  </head>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/solax">
+            <img src="../assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a
+                  class="font-primary text-primary-white font-medium"
+                  href="/solax/installer.html"
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- first section -->
+      <section class="bg-primary-white py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="px-24">
+            <div class="flex flex-col items-center gap-4">
+              <div class="flex gap-4 items-center">
+                <span
+                  class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                  >Homeowners</span
+                >
+                <span class="font-secondary text-xs text-primary-black"
+                  >June 21, 2024</span
+                >
+              </div>
+
+              <h2
+                class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center lg:max-w-[80%]"
+              >
+                The blog title goes here Lorem ipsum dolor
+              </h2>
+
+              <div class="py-8 border-b border-[#C8C8C8] w-full">
+                <img
+                  class="w-full"
+                  src="../assets/blog/blogInner_1.png"
+                  alt="blog_inner"
+                />
+              </div>
+            </div>
+
+            <div class="py-10 flex flex-col gap-5 border-b border-[#C8C8C8]">
+              <div class="flex flex-col gap-5">
+                <h3 class="font-primary font-semibold text-3xl">
+                  About The Event
+                </h3>
+                <div class="flex flex-col gap-4">
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <span class="text-primary-orange">Maecenas dui quam</span>,
+                    pretium non nisi sed, commodo commodo elit. Morbi
+                    ullamcorper, dolor non maximus consectetur, tellus mi
+                    feugiat purus, eget lobortis lacus mi nec magna. Nam eu
+                    felis et enim luctus aliquam id fermentum dui.
+                  </p>
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas dui quam, pretium non nisi sed, commodo commodo
+                    elit. Morbi ullamcorper, dolor non maximus consectetur,
+                    tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                    Nam eu felis et enim luctus aliquam id fermentum dui.
+                  </p>
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur
+                    <span class="text-primary-orange">adipiscing</span> elit.
+                    Maecenas dui quam, pretium non nisi sed, commodo commodo
+                    elit. Morbi ullamcorper, dolor non maximus consectetur,
+                    tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                    Nam eu felis et enim luctus aliquam id fermentum dui.
+                  </p>
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas dui quam, pretium non nisi sed, commodo commodo
+                    elit. Morbi ullamcorper, dolor non maximus consectetur,
+                    tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                    Nam eu felis et enim luctus aliquam id
+                    <span class="text-primary-orange">fermentum</span> dui.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-5">
+                <h3 class="font-primary font-semibold text-3xl">
+                  Lorem ipsum dolor sit amet
+                </h3>
+                <div class="flex flex-col gap-4">
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas dui quam, pretium non nisi sed, commodo commodo
+                    elit. Morbi ullamcorper, dolor non maximus consectetur,
+                    tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                    Nam eu felis et enim luctus aliquam id fermentum dui.
+                  </p>
+                  <p class="font-secondary text-base text-[#444444]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas dui quam, pretium non nisi sed, commodo commodo
+                    elit. Morbi ullamcorper.
+                  </p>
+                </div>
+                <ul class="flex flex-col gap-4">
+                  <li class="flex flex-col gap-4">
+                    <h4 class="font-primary font-semibold text-2xl">
+                      1. Lorem ipsum dolor sit amet
+                    </h4>
+                    <p class="font-secondary text-base text-[#444444]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas dui quam, pretium non nisi sed, commodo commodo
+                      elit. Morbi ullamcorper, dolor non maximus consectetur,
+                      tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                      Nam eu felis et enim luctus aliquam id fermentum dui.
+                    </p>
+                    <p class="font-secondary text-base text-[#444444]">
+                      <span class="text-primary-orange">Lorem ipsum</span>
+                      dolor sit amet, consectetur adipiscing elit. Maecenas dui
+                      quam, pretium non nisi sed, commodo commodo elit. Morbi
+                      ullamcorper, dolor non maximus consectetur, tellus mi
+                      feugiat purus, eget lobortis lacus mi nec magna. Nam eu
+                      felis et enim luctus aliquam id fermentum dui.
+                    </p>
+                  </li>
+                  <li class="flex flex-col gap-4">
+                    <h4 class="font-primary font-semibold text-2xl">
+                      2. Lorem ipsum dolor sit amet
+                    </h4>
+                    <p class="font-secondary text-base text-[#444444]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas dui quam, pretium non nisi sed, commodo commodo
+                      elit. Morbi ullamcorper, dolor non maximus consectetur,
+                      tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                      Nam eu felis et enim luctus aliquam id fermentum dui.
+                    </p>
+                    <div class="w-full py-4">
+                      <img
+                        class="w-full"
+                        src="../assets/blog/blogInner_2.png"
+                        alt="blogInner_2"
+                      />
+                    </div>
+                    <p class="font-secondary text-base text-[#444444]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas dui quam, pretium non nisi sed, commodo commodo
+                      elit. Morbi ullamcorper, dolor non maximus consectetur,
+                      tellus mi feugiat purus, eget lobortis lacus mi nec magna.
+                      Nam eu felis et enim luctus aliquam id fermentum dui.
+                      Class aptent taciti sociosqu ad litora torquent per
+                      conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <p class="font-secondary text-base text-[#444444]">
+                      magna. Nam eu felis et enim luctus aliquam id fermentum
+                      dui. Class aptent taciti sociosqu ad litora torquent per
+                      conubia nostra, per inceptos himenaeos.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-8 flex justify-between">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="../assets/blog/blogAuthor.png" alt="blogAuthor" />
+                </div>
+                <span class="font-primary text-primary-black">Kevin Smith</span>
+              </div>
+
+              <ul class="flex items-center gap-2">
+                <li>
+                  <a
+                    class="bg-[#C8C8C84D] w-10 h-10 rounded-full border border-[#C8C8C8] flex justify-center items-center"
+                    href=""
+                  >
+                    <img src="../assets/events/inner_fb.svg" alt="inner_icon" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="bg-[#C8C8C84D] w-10 h-10 rounded-full border border-[#C8C8C8] flex justify-center items-center"
+                    href=""
+                  >
+                    <img src="../assets/events/inner_x.svg" alt="inner_icon" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="bg-[#C8C8C84D] w-10 h-10 rounded-full border border-[#C8C8C8] flex justify-center items-center"
+                    href=""
+                  >
+                    <img src="../assets/events/limkedin.svg" alt="inner_icon" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="bg-[#C8C8C84D] w-10 h-10 rounded-full border border-[#C8C8C8] flex justify-center items-center"
+                    href=""
+                  >
+                    <img src="../assets/events/attach.svg" alt="inner_icon" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section -->
+      <section class="py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-16">
+            <h2
+              class="font-primary font-medium text-4xl lg:text-5xl lg:leading-[56px] text-primary-white font-medium"
+            >
+              Related Blogs
+            </h2>
+
+            <ul class="grid grid-cols-3 gap-x-4 gap-y-8">
+              <li>
+                <a
+                  class="flex flex-col gap-4"
+                  href="/solax/blogs/blogInner.html"
+                >
+                  <div class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/blog/blog_1.png" alt="blog_pic" />
+                    </div>
+                    <div class="flex gap-4 items-center">
+                      <span
+                        class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                        >Homeowners</span
+                      >
+                      <span class="font-secondary text-xs text-primary-white"
+                        >June 21, 2024</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <h3
+                      class="font-primary font-medium text-2xl text-primary-white"
+                    >
+                      SolaX Power Secures Placement on Mosaic and Sungage
+                      Approved Vendor List
+                    </h3>
+
+                    <div class="flex items-center gap-2">
+                      <div>
+                        <img
+                          src="../assets/blog/blogAuthor.png"
+                          alt="blogAuthor"
+                        />
+                      </div>
+                      <span class="font-primary text-primary-white"
+                        >Kevin Smith</span
+                      >
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="flex flex-col gap-4"
+                  href="/solax/blogs/blogInner.html"
+                >
+                  <div class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/blog/blog_2.png" alt="blog_pic" />
+                    </div>
+                    <div class="flex gap-4 items-center">
+                      <span
+                        class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                        >Innovation</span
+                      >
+                      <span class="font-secondary text-xs text-primary-white"
+                        >June 21, 2024</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <h3
+                      class="font-primary font-medium text-2xl text-primary-white"
+                    >
+                      SolaX Power Secures Placement on Mosaic and Sungage
+                      Approved Vendor List
+                    </h3>
+
+                    <div class="flex items-center gap-2">
+                      <div>
+                        <img
+                          src="../assets/blog/blogAuthor.png"
+                          alt="blogAuthor"
+                        />
+                      </div>
+                      <span class="font-primary text-sm text-primary-white"
+                        >Kevin Smith</span
+                      >
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="flex flex-col gap-4"
+                  href="/solax/blogs/blogInner.html"
+                >
+                  <div class="flex flex-col gap-4">
+                    <div>
+                      <img src="../assets/blog/blog_3.png" alt="blog_pic" />
+                    </div>
+                    <div class="flex gap-4 items-center">
+                      <span
+                        class="px-2 py-1 bg-primary-orange rounded-full font-secondary text-xs text-primary-white"
+                        >Homeowners</span
+                      >
+                      <span class="font-secondary text-xs text-primary-white"
+                        >June 21, 2024</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <h3
+                      class="font-primary font-medium text-2xl text-primary-white"
+                    >
+                      SolaX Power Secures Placement on Mosaic and Sungage
+                      Approved Vendor List
+                    </h3>
+
+                    <div class="flex items-center gap-2">
+                      <div>
+                        <img
+                          src="../assets/blog/blogAuthor.png"
+                          alt="blogAuthor"
+                        />
+                      </div>
+                      <span class="font-primary text-sm text-primary-white"
+                        >Kevin Smith</span
+                      >
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- third section -->
+      <section class="py-24">
+        <div
+          class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+          >
+            <div class="flex flex-col gap-10 lg:max-w-[35%]">
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="font-primary text-4xl font-medium text-primary-black"
+                >
+                  Join Our Newsletter
+                </h3>
+                <p class="font-secondary text-primary-black">
+                  Keep yourself updated with latest news and updates
+                </p>
+              </div>
+
+              <form action="">
+                <div
+                  class="flex py-2.5 pr-2.5 pl-[18px] bg-white rounded-full flex justify-between"
+                >
+                  <input
+                    class="font-primary text-primary-black grow text-base"
+                    type="text"
+                    placeholder="Enter your email"
+                  /><button
+                    class="bg-primary-yellow py-4 px-6 rounded-full flex items-center gap-2 font-medium"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <img
+                      class="hidden lg:inline-block"
+                      src="../assets/ArrowLeft.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <img src="../assets/homepage_4.svg" alt="homepage_4" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="pt-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+            <div class="flex justify-center">
+              <a href="/solax">
+                <img src="../assets/footer_logo.svg" alt="footer_logo" />
+              </a>
+            </div>
+
+            <ul
+              class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+            >
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Company</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/solax/aboutUs.html"
+                      class="font-secondary text-primary-grey"
+                      >About Solax</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/successStories.html"
+                      class="font-secondary text-primary-grey"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/Event/event.html"
+                      class="font-secondary text-primary-grey"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Sustainability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Solutions</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Energy Storage System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Commercial & Industrial</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >EV Charger</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Smart Energy Management</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Services</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Find a Distributor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Global Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Registration</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Upgrade</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Cloud</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Design</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Webinar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-16">
+            <div
+              class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+            ></div>
+            <div
+              class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+            >
+              <ul class="flex items-center gap-5">
+                <li>
+                  <a href="">
+                    <img src="../assets/instagram.svg" alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/fb.svg" alt="fb" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/yt.svg" alt="yt" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/twitter.svg" alt="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/linkedin.svg" alt="linkedin" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="flex gap-5">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sitemap</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+
+              <p class="font-secondary text-primary-grey">
+                Copyright @SolaX Power
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="../tailwindConfig.js"></script>
+  </body>
+</html>
