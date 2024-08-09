@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .active {
+        display: flex;
+        animation: modalAnimation 0.3s ease-in-out;
+      }
+      @keyframes modalAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+    <title>Products</title>
+  </head>
+  <body class="bg-primary-black">
+    <!-- header -->
+    <header class="bg-primary-black absolute z-[999] w-full top-0 left-0 z-50">
+      <div
+        class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
+        <div class="h-20 flex items-center justify-between">
+          <a href="/solax">
+            <img src="./assets/Solax_Logo.svg" alt="brand_logo" />
+          </a>
+
+          <div
+            id="navMenu"
+            class="nav-menu p-10 lg:p-0 lg:w-2/3 flex flex-col lg:flex-row items-center justify-between gap-6 absolute z-50 w-[320px] sm:w-[448px] md:w-[672px] lg:w-[65%] rounded-2xl lg:rounded-none top-24 bg-primary-black lg:static"
+          >
+            <ul class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Homeowners</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a
+                  class="font-primary text-primary-white font-medium"
+                  href="/solax/installer.html"
+                  >Installers</a
+                >
+              </li>
+              <li class="flex justify-center">
+                <a class="font-primary text-primary-white font-medium" href=""
+                  >Support</a
+                >
+              </li>
+            </ul>
+
+            <div class="primary-btn">
+              <button
+                class="bg-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="relative lg:hidden">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox" class="toggle">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+
+    <main>
+      <!-- first section -->
+      <section class="relative h-screen xl:h-auto overflow-x-hidden">
+        <video
+          autoplay
+          muted
+          loop
+          id="bg-video"
+          poster=""
+          class="h-full xl:h-auto object-cover"
+        >
+          <source src="./assets/videos/hero-section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="content absolute bg-[#15151580] w-full h-full top-0 left-0">
+          <div
+            class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+          >
+            <div
+              class="hero-content h-screen flex flex-col justify-center items-center gap-6"
+            >
+              <div class="hero-content-top flex flex-col items-center gap-4">
+                <h1
+                  class="font-primary font-medium text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] xl:max-w-[65%] text-center drop-shadow-2xl"
+                >
+                  Our Products
+                </h1>
+                <p
+                  class="font-secondary font-medium text-lg lg:text-xl text-primary-white text-center lg:max-w-[60%]"
+                >
+                  Discover the cutting-edge technology behind SolaX Power
+                  products, designed to meet your energy storage needs.
+                </p>
+              </div>
+
+              <div
+                class="hero-content-btm flex flex-col md:flex-row items-center justify-center gap-4 w-[80%] md:max-w-none"
+              >
+                <button
+                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto justify-center"
+                >
+                  <span>Watch Video</span>
+                </button>
+
+                <button
+                  class="px-6 py-3 rounded-full font-primary text-primary-white font-medium border border-primary-white w-full md:w-auto"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second section -->
+      <section class="bg-primary-white py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-16">
+            <div class="flex flex-col items-center gap-2">
+              <span
+                class="font-primary text-lg text-primary-orange font-medium uppercase text-center"
+                >cutting-edge technology</span
+              >
+              <h2
+                class="font-primary text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center lg:max-w-[55%]"
+              >
+                SolaX Products
+              </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-4">
+              <div
+                class="bg-primary-black flex flex-col lg:flex-row items-center gap-8 lg:gap-16 lg:col-span-2"
+              >
+                <div class="relative">
+                  <div class="flex items-center justify-center">
+                    <img src="./assets/product/Vector_1.svg" alt="Vector_1" />
+                    <img
+                      class="absolute top-0 lg:top-5"
+                      src="./assets/product/product_1.png"
+                      alt="product_1"
+                    />
+                  </div>
+                </div>
+                <div class="grow flex flex-col gap-4 p-5 lg:p-0">
+                  <h3
+                    class="font-primary font-medium text-primary-white text-4xl"
+                  >
+                    Energy Storage Inverter
+                  </h3>
+                  <p class="font-secondary text-lg text-primary-white">
+                    Versatile inverters that integrate seamlessly<br />
+                    with solar panels and batteries.
+                  </p>
+                  <div>
+                    <button
+                      class="open-modal-btn font-primary text-primary-yellow"
+                      data-modal-id="modal1"
+                    >
+                      View Details
+                    </button>
+
+                    <!-- modal_1 -->
+                    <div
+                      id="modal1"
+                      class="modal hidden fixed inset-0 bg-primary-black bg-opacity-75 overflow-y-auto h-full w-full flex justify-center items-center backdrop-blur-lg z-[999]"
+                    >
+                      <div
+                        class="bg-primary-black flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-[80%] xl:w-[60%] relative"
+                      >
+                        <div class="relative">
+                          <div class="flex items-center justify-center">
+                            <img
+                              src="./assets/product/Vector_1.svg"
+                              alt="Vector_1"
+                            />
+                            <img
+                              class="absolute top-0 lg:top-5"
+                              src="./assets/product/product_1.png"
+                              alt="product_1"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="grow flex flex-col gap-4 p-5 lg:p-0">
+                          <h3
+                            class="font-primary font-medium text-primary-white text-4xl"
+                          >
+                            Energy Storage Inverter
+                          </h3>
+
+                          <div class="flex flex-col gap-6">
+                            <span
+                              class="font-secondary font-bold text-lg text-primary-yellow"
+                              >Features</span
+                            >
+                            <ul
+                              class="list-disc marker:text-primary-white list-outside ml-5"
+                            >
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  AC and DC coupled inverters.
+                                </p>
+                              </li>
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  Micro-grid ready with black start feature.
+                                </p>
+                              </li>
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  Real-time consumption monitoring with a 10s
+                                  data refresh interval.
+                                </p>
+                              </li>
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  24/7 live monitoring with an intuitive user
+                                  interface.
+                                </p>
+                              </li>
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  Fast battery commissioning and real-time
+                                  installer support.
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="close-modal-btn absolute top-5 right-5">
+                          <button>
+                            <img src="./assets/product/cross.svg" alt="cross" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-primary-black flex flex-col gap-8 lg:gap-16">
+                <div class="flex justify-end">
+                  <div
+                    class="flex flex-col gap-4 p-5 lg:pb-0 lg:pl-0 lg:pt-[60px] lg:pr-[60px]"
+                  >
+                    <h3
+                      class="font-primary font-medium text-primary-white text-4xl"
+                    >
+                      Energy Storage Inverter
+                    </h3>
+                    <p class="font-secondary text-lg text-primary-white">
+                      Versatile inverters that integrate seamlessly<br />
+                      with solar panels and batteries.
+                    </p>
+                    <div>
+                      <button
+                        class="open-modal-btn font-primary text-primary-yellow"
+                        data-modal-id="modal2"
+                      >
+                        View Details
+                      </button>
+
+                      <!-- modal_2 -->
+                      <div
+                        id="modal2"
+                        class="modal hidden fixed inset-0 bg-primary-black bg-opacity-75 overflow-y-auto h-full w-full flex justify-center items-center backdrop-blur-lg z-[999]"
+                      >
+                        <div
+                          class="bg-primary-black flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-[80%] xl:w-[60%] relative"
+                        >
+                          <div class="relative">
+                            <div class="flex items-center justify-center">
+                              <img
+                                src="./assets/product/Vector_1.svg"
+                                alt="Vector_1"
+                              />
+                              <img
+                                class="absolute h-full"
+                                src="./assets/product/product_2.png"
+                                alt="product_1"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="grow flex flex-col gap-4 p-5">
+                            <h3
+                              class="font-primary font-medium text-primary-white text-4xl"
+                            >
+                              Triple Power Battery
+                            </h3>
+
+                            <div class="flex flex-col gap-6">
+                              <span
+                                class="font-secondary font-bold text-lg text-primary-yellow"
+                                >Features</span
+                              >
+                              <ul
+                                class="list-disc marker:text-primary-white list-outside ml-5"
+                              >
+                                <li class="">
+                                  <p class="font-secondary text-primary-white">
+                                    Stackable design: up to 80kWh storage
+                                    capacity
+                                  </p>
+                                </li>
+                                <li class="">
+                                  <p class="font-secondary text-primary-white">
+                                    Operates from -22°F to 122°F.
+                                  </p>
+                                </li>
+                                <li class="">
+                                  <p class="font-secondary text-primary-white">
+                                    Phosphate lithium-ion batteries with over
+                                    6000 cycles.
+                                  </p>
+                                </li>
+                                <li class="">
+                                  <p class="font-secondary text-primary-white">
+                                    Optional ACFI and rapid shutdown.
+                                  </p>
+                                </li>
+                                <li class="">
+                                  <p class="font-secondary text-primary-white">
+                                    Industry-leading 12-year warranty.
+                                  </p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="close-modal-btn absolute top-5 right-5">
+                            <button>
+                              <img
+                                src="./assets/product/cross.svg"
+                                alt="cross"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex">
+                    <img src="./assets/product/Vector_2.svg" alt="Vector_1" />
+                    <img
+                      class="absolute h-full left-10 top-5 lg:left-0"
+                      src="./assets/product/product_2.png"
+                      alt="product_1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="bg-primary-black flex flex-col">
+                <div class="relative">
+                  <div class="flex justify-end">
+                    <img src="./assets/product/Vector_3.svg" alt="Vector_1" />
+                    <img
+                      class="absolute top-5"
+                      src="./assets/product/product_3.png"
+                      alt="product_1"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="grow flex flex-col gap-4 pb-8 lg:pb-0 pl-[60px] pr-[60px]"
+                >
+                  <h3
+                    class="font-primary font-medium text-primary-white text-4xl"
+                  >
+                    Accessories
+                  </h3>
+                  <p class="font-secondary text-lg text-primary-white">
+                    Essential accessories to optimize and<br />
+                    expand your energy storage system.
+                  </p>
+                  <div>
+                    <button
+                      class="open-modal-btn font-primary text-primary-yellow"
+                      data-modal-id="modal3"
+                    >
+                      View Details
+                    </button>
+
+                    <!-- modal_3 -->
+                    <div
+                      id="modal3"
+                      class="modal hidden fixed inset-0 bg-primary-black bg-opacity-75 overflow-y-auto h-full w-full flex justify-center items-center backdrop-blur-lg z-[999]"
+                    >
+                      <div
+                        class="bg-primary-black flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-[80%] xl:w-[60%] relative"
+                      >
+                        <div class="relative h-full">
+                          <div class="flex items-center justify-center">
+                            <img
+                              class="h-full"
+                              src="./assets/product/Vector_1.svg"
+                              alt="Vector_1"
+                            />
+                            <img
+                              class="absolute"
+                              src="./assets/product/product_3.png"
+                              alt="product_1"
+                            />
+                          </div>
+                        </div>
+
+                        <div
+                          class="flex flex-col gap-4 lg:w-[50%] p-5 lg:pl-0 lg:pr-10 lg:py-10"
+                        >
+                          <h3
+                            class="font-primary font-medium text-primary-white text-4xl"
+                          >
+                            Accessories
+                          </h3>
+
+                          <div class="flex flex-col gap-6">
+                            <span
+                              class="font-secondary font-bold text-lg text-primary-yellow"
+                              >Key Products</span
+                            >
+                            <ul
+                              class="list-disc marker:text-primary-white list-outside ml-5"
+                            >
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  <b>Switch Box:</b> Intelligent load controls
+                                  (3 channels), supports up to four 120V loads
+                                  or two 240V loads, and one 240V third-party
+                                  inverter.
+                                </p>
+                              </li>
+                              <li class="">
+                                <p class="font-secondary text-primary-white">
+                                  <b>Backup Interface (BI) A1-BI-200-G2:</b>
+                                  Supports a maximum of 160A AC current,
+                                  provides whole home backup, and can handle up
+                                  to 4 inverters in parallel with 30kW/80kWh.
+                                  Includes built-in energy management meter/CT.
+                                </p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="close-modal-btn absolute top-5 right-5">
+                          <button>
+                            <img src="./assets/product/cross.svg" alt="cross" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- third section -->
+      <section class="py-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-16">
+            <div class="flex flex-col items-center gap-2">
+              <span
+                class="font-primary text-lg text-primary-orange font-medium uppercase text-center"
+                >why solax</span
+              >
+              <h2
+                class="font-primary text-4xl lg:text-6xl lg:leading-[70px] text-primary-white font-medium text-center lg:max-w-[55%]"
+              >
+                The Features
+              </h2>
+            </div>
+
+            <div class="flex flex-col gap-5">
+              <div class="grid lg:grid-cols-2 gap-5">
+                <div
+                  class="relative h-[320px] lg:h-auto lg:row-span-2 bg-[url('./assets/product/feature_1.png')] bg-cover bg-no-repeat bg-right"
+                >
+                  <!-- <img
+                    class="h-full"
+                    src="./assets/product/feature_1.png"
+                    alt="feature"
+                  /> -->
+                  <img
+                    class="absolute top-8 left-8"
+                    src="./assets/homepage_4.svg"
+                    alt="logo"
+                    width="42"
+                    height="42"
+                  />
+                </div>
+
+                <div class="relative border border-[#C8C8C83D]">
+                  <img
+                    class="w-full"
+                    src="./assets/product/feature_2.png"
+                    alt="feature"
+                  />
+                  <div
+                    class="bg-gradient-to-b from-[#15151500] to-[#151515] absolute top-0 left-0 w-full h-full p-5 flex items-end"
+                  >
+                    <div>
+                      <h3 class="font-primary text-2xl text-primary-white">
+                        Advanced Solutions
+                      </h3>
+                      <p class="font-secondary text-sm text-primary-white">
+                        Advanced energy management solutions<br />
+                        designed for efficiency and reliability.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative border border-[#C8C8C83D]">
+                  <img
+                    class="w-full"
+                    src="./assets/product/feature_3.png"
+                    alt="feature"
+                  />
+                  <div
+                    class="bg-gradient-to-b from-[#15151500] to-[#151515] absolute top-0 left-0 w-full h-full p-5 flex items-end"
+                  >
+                    <div>
+                      <h3 class="font-primary text-2xl text-primary-white">
+                        Advanced Solutions
+                      </h3>
+                      <p class="font-secondary text-sm text-primary-white">
+                        Advanced energy management solutions<br />
+                        designed for efficiency and reliability.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-3 gap-5">
+                <div class="relative border border-[#C8C8C83D]">
+                  <img
+                    class="w-full"
+                    src="./assets/product/feature_4.png"
+                    alt="feature"
+                  />
+                  <div
+                    class="bg-gradient-to-b from-[#15151500] to-[#151515] absolute top-0 left-0 w-full h-full p-5 flex items-end"
+                  >
+                    <div>
+                      <h3 class="font-primary text-2xl text-primary-white">
+                        Safety & Performance
+                      </h3>
+                      <p class="font-secondary text-sm text-primary-white">
+                        Innovative technology ensuring safety and<br />
+                        performance in diverse environments.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative border border-[#C8C8C83D]">
+                  <img
+                    class="w-full"
+                    src="./assets/product/feature_5.png"
+                    alt="feature"
+                  />
+                  <div
+                    class="bg-gradient-to-b from-[#15151500] to-[#151515] absolute top-0 left-0 w-full h-full p-5 flex items-end"
+                  >
+                    <div>
+                      <h3 class="font-primary text-2xl text-primary-white">
+                        Interactive Videos
+                      </h3>
+                      <p class="font-secondary text-sm text-primary-white">
+                        Explore detailed product specifications and<br />
+                        benefits through interactive videos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative border border-[#C8C8C83D]">
+                  <img
+                    class="w-full"
+                    src="./assets/product/feature_6.png"
+                    alt="feature"
+                  />
+                  <div
+                    class="bg-gradient-to-b from-[#15151500] to-[#151515] absolute top-0 left-0 w-full h-full p-5 flex items-end"
+                  >
+                    <div>
+                      <h3 class="font-primary text-2xl text-primary-white">
+                        Real-Time Resources
+                      </h3>
+                      <p class="font-secondary text-sm text-primary-white">
+                        Access real-time support and resources for<br />
+                        optimal system performance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- forth section -->
+      <section class="">
+        <div
+          class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+          >
+            <div class="flex flex-col gap-10 lg:max-w-[50%]">
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="font-primary text-4xl font-medium text-primary-black"
+                >
+                  Join Our Newsletter
+                </h3>
+                <p class="font-secondary text-primary-black">
+                  Keep yourself updated with latest news and updates
+                </p>
+              </div>
+
+              <form action="">
+                <div
+                  class="flex py-2.5 pr-2.5 pl-[18px] bg-white rounded-full flex justify-between"
+                >
+                  <input
+                    class="font-primary text-primary-black grow text-base"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    class="bg-primary-yellow py-4 px-6 rounded-full flex items-center gap-2 font-medium"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <img
+                      class="hidden lg:inline-block"
+                      src="../assets/ArrowLeft.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <img src="../assets/homepage_4.svg" alt="homepage_4" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="pt-24">
+        <div
+          class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+        >
+          <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+            <div class="flex justify-center">
+              <a href="/solax">
+                <img src="../assets/footer_logo.svg" alt="footer_logo" />
+              </a>
+            </div>
+
+            <ul
+              class="grid grid-cols-2 gap-y-10 gap-x-6 lg:w-[70%] lg:flex lg:justify-between"
+            >
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Company</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/solax/aboutUs.html"
+                      class="font-secondary text-primary-grey"
+                      >About Solax</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/successStories.html"
+                      class="font-secondary text-primary-grey"
+                      >Success Stories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/solax/Event/event.html"
+                      class="font-secondary text-primary-grey"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Sustainability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Solutions</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Energy Storage System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Commercial & Industrial</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >EV Charger</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Smart Energy Management</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Services</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Downloads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Find a Distributor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Global Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Warranty Registration</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="flex flex-col gap-8">
+                <span
+                  class="font-primary text-primary-white text-base font-medium"
+                  >Upgrade</span
+                >
+
+                <ul class="flex flex-col gap-4">
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Cloud</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >SolaX Design</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Webinar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-secondary text-primary-grey"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-16">
+            <div
+              class="w-full h-[1px] bg-gradient-to-r from-[#15151566] via-[#7070705F] to-[#15151566]"
+            ></div>
+            <div
+              class="py-5 flex flex-col items-center gap-6 lg:flex-row lg:justify-between"
+            >
+              <ul class="flex items-center gap-5">
+                <li>
+                  <a href="">
+                    <img src="../assets/instagram.svg" alt="instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/fb.svg" alt="fb" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/yt.svg" alt="yt" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/twitter.svg" alt="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../assets/linkedin.svg" alt="linkedin" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="flex gap-5">
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Sitemap</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Terms of Use</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="font-secondary text-primary-grey"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+
+              <p class="font-secondary text-primary-grey">
+                Copyright @SolaX Power
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./tailwindConfig.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all open modal buttons
+        const openModalBtns = document.querySelectorAll(".open-modal-btn");
+
+        // Get all close modal buttons
+        const closeModalBtns = document.querySelectorAll(".close-modal-btn");
+
+        // Get all modals
+        const modals = document.querySelectorAll(".modal");
+
+        // Function to open modal
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.remove("hidden");
+            modal.classList.add("active");
+          }
+        }
+
+        // Function to close modal
+        function closeModal(modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("active");
+        }
+
+        // Add click event listeners to open buttons
+        openModalBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const modalId = this.getAttribute("data-modal-id");
+            openModal(modalId);
+          });
+        });
+
+        // Add click event listeners to close buttons
+        closeModalBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const modal = this.closest(".modal");
+            closeModal(modal);
+          });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener("click", function (event) {
+          modals.forEach((modal) => {
+            if (event.target === modal) {
+              closeModal(modal);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

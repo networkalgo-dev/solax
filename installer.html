@@ -18,20 +18,23 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       .tab-content {
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-        position: absolute;
+        display: none;
         width: 100%;
         top: 0;
       }
       .tab-content.active {
-        opacity: 1;
-        transform: translateY(0);
+        display: block;
+        animation: tabAnimation 0.5s ease-in-out;
       }
-      .tab-contents {
-        position: relative;
-        height: 750px; /* Set a fixed height to prevent height collapse */
+      @keyframes tabAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
     <title>Installer</title>
@@ -117,7 +120,7 @@
             >
               <div class="hero-content-top flex flex-col items-center gap-4">
                 <h1
-                  class="font-primary font-medium text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] lg:max-w-[65%] text-center drop-shadow-2xl"
+                  class="font-primary font-medium text-primary-white text-[42px] leading-[48px] sm:text-[52px] sm:leading-[58px] lg:text-[72px] lg:leading-[80px] xl:text-[80px] xl:leading-[88px] xl:max-w-[65%] text-center drop-shadow-2xl"
                 >
                   Installers Empower Your Business
                 </h1>
@@ -129,10 +132,10 @@
               </div>
 
               <div
-                class="hero-content-btm flex flex-col lg:flex-row items-center justify-center gap-4 max-w-[80%] md:max-w-none"
+                class="hero-content-btm flex flex-col md:flex-row items-center justify-center gap-4 w-[80%] md:max-w-none"
               >
                 <button
-                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto"
+                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto justify-center"
                 >
                   <span>Watch Video</span>
                 </button>
@@ -177,7 +180,7 @@
         >
           <div>
             <p
-              class="font-secondary font-medium text-primary-black max-w-[80%]"
+              class="font-secondary font-medium text-primary-black lg:max-w-[80%]"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut
               vulputate turpis, in auctor nulla. Aenean placerat id eros quis
@@ -192,16 +195,18 @@
 
       <!-- third section -->
       <section class="relative">
-        <div class="flex">
+        <div class="flex flex-col lg:flex-row">
           <div class="">
             <img
-              class="sticky top-0"
+              class="lg:sticky top-0"
               src="./assets/installer/installer-3.webp"
               alt="installer-3"
             />
           </div>
 
-          <div class="w-[55%] ml-auto flex flex-col gap-10 pl-10 py-24">
+          <div
+            class="lg:w-[55%] lg:ml-auto flex flex-col gap-10 px-8 lg:pl-10 lg:pr-0 py-24"
+          >
             <div class="flex flex-col gap-2">
               <span
                 class="font-primary text-lg text-primary-orange font-medium uppercase"
@@ -214,7 +219,7 @@
               </h2>
             </div>
 
-            <ul class="max-w-[60%]">
+            <ul class="lg:max-w-[80%] xl:max-w-[60%]">
               <li class="flex flex-col gap-4 pb-8 border-b border-[#C8C8C8]">
                 <div>
                   <img src="./assets/installer/fi_3174745.svg" alt="icon_1" />
@@ -328,9 +333,9 @@
           class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
           <div
-            class="bg-[#151515] opacity-80 mix-blend-luminosity py-20 px-16 w-3/5"
+            class="bg-[#151515] opacity-80 mix-blend-luminosity py-10 px-8 lg:py-20 lg:px-16 lg:w-4/5 xl:3/5"
           >
-            <ul class="grid grid-cols-2 gap-y-14 gap-x-20">
+            <ul class="grid lg:grid-cols-2 gap-y-14 gap-x-20">
               <li class="flex items-center gap-6">
                 <div>
                   <img
@@ -465,8 +470,8 @@
               </h2>
             </div>
 
-            <div class="bg-primary-black p-16 flex flex-col gap-10">
-              <div class="tabs grid grid-cols-3">
+            <div class="bg-primary-black p-8 lg:p-16 flex flex-col gap-10">
+              <div class="tabs grid lg:grid-cols-3">
                 <button
                   data-tab="pv-inverter"
                   class="tab-link py-5 border-b border-[#C8C8C8] font-secondary text-xl text-primary-white text-primary-yellow border-primary-yellow"
@@ -489,68 +494,78 @@
 
               <div class="tab-contents">
                 <!-- pv inverter content -->
-                <div
-                  id="pv-inverter"
-                  class="tab-content active grid grid-cols-2 gap-6"
-                >
-                  <div
-                    class="h-[350px] bg-[url('./assets/installer/tab1.png')] bg-cover bg-no-repeat"
-                  >
-                    <div
-                      class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
-                    >
-                      <span class="text-sm font-secondary text-[#C8C8C8]"
-                        >Location</span
+                <div id="pv-inverter" class="tab-content active">
+                  <div class="grid lg:grid-cols-2 gap-6">
+                    <div class="border border-[#C8C8C83D]">
+                      <div
+                        class="h-[350px] bg-[url('./assets/installer/tab1.png')] bg-cover bg-no-repeat"
                       >
-                      <span
-                        class="font-secondary font-medium text-primary-white"
-                        >Australia</span
-                      >
+                        <div
+                          class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border flex flex-col justify-end gap-0.5 p-4"
+                        >
+                          <span class="text-sm font-secondary text-[#C8C8C8]"
+                            >Location</span
+                          >
+                          <span
+                            class="font-secondary font-medium text-primary-white"
+                            >Australia</span
+                          >
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="h-[350px] bg-[url('./assets/installer/tab2.png')] bg-cover bg-no-repeat"
-                  >
-                    <div
-                      class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
-                    >
-                      <span class="text-sm font-secondary text-[#C8C8C8]"
-                        >Location</span
+
+                    <div class="border border-[#C8C8C83D]">
+                      <div
+                        class="h-[350px] bg-[url('./assets/installer/tab2.png')] bg-cover bg-no-repeat"
                       >
-                      <span
-                        class="font-secondary font-medium text-primary-white"
-                        >New Zealand</span
-                      >
+                        <div
+                          class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
+                        >
+                          <span class="text-sm font-secondary text-[#C8C8C8]"
+                            >Location</span
+                          >
+                          <span
+                            class="font-secondary font-medium text-primary-white"
+                            >New Zealand</span
+                          >
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="h-[350px] bg-[url('./assets/installer/tab3.png')] bg-cover bg-no-repeat"
-                  >
-                    <div
-                      class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
-                    >
-                      <span class="text-sm font-secondary text-[#C8C8C8]"
-                        >Location</span
+
+                    <div class="border border-[#C8C8C83D]">
+                      <div
+                        class="h-[350px] bg-[url('./assets/installer/tab3.png')] bg-cover bg-no-repeat"
                       >
-                      <span
-                        class="font-secondary font-medium text-primary-white"
-                        >Australia</span
-                      >
+                        <div
+                          class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
+                        >
+                          <span class="text-sm font-secondary text-[#C8C8C8]"
+                            >Location</span
+                          >
+                          <span
+                            class="font-secondary font-medium text-primary-white"
+                            >Australia</span
+                          >
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="h-[350px] bg-[url('./assets/installer/tab4.png')] bg-cover bg-no-repeat"
-                  >
-                    <div
-                      class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
-                    >
-                      <span class="text-sm font-secondary text-[#C8C8C8]"
-                        >Location</span
+
+                    <div class="border border-[#C8C8C83D]">
+                      <div
+                        class="h-[350px] bg-[url('./assets/installer/tab4.png')] bg-cover bg-no-repeat"
                       >
-                      <span
-                        class="font-secondary font-medium text-primary-white"
-                        >Hungary</span
-                      >
+                        <div
+                          class="w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] border border-[#C8C8C83D] flex flex-col justify-end gap-0.5 p-4"
+                        >
+                          <span class="text-sm font-secondary text-[#C8C8C8]"
+                            >Location</span
+                          >
+                          <span
+                            class="font-secondary font-medium text-primary-white"
+                            >Hungary</span
+                          >
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -584,13 +599,13 @@
 
       <!-- sixth section -->
       <section
-        class="py-44 bg-[url('./assets/installer/installer-5.png')] bg-cover bg-no-repeat relative"
+        class="py-24 lg:py-44 bg-[url('./assets/installer/installer-5.png')] bg-cover bg-no-repeat relative"
       >
         <div
           class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
-          <div>
-            <div class="flex flex-col gap-6 max-w-[60%]">
+          <div class="flex flex-col items-center md:items-start gap-10">
+            <div class="flex flex-col gap-6 lg:max-w-[60%]">
               <h2
                 class="font-primary text-4xl lg:text-6xl lg:leading-[70px] text-primary-white font-medium"
               >
@@ -598,15 +613,19 @@
               </h2>
               <div>
                 <button
-                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center gap-2 w-full md:w-auto"
+                  class="bg-primary-yellow border border-primary-yellow px-6 py-3 rounded-full font-primary text-primary-black font-medium flex items-center justify-center gap-2 w-full md:w-auto"
                 >
                   <span>Schedule a Consultation</span>
-                  <img src="./assets/ArrowLeft.svg" alt="arrowLeft" />
+                  <img
+                    class="hidden lg:inline-block"
+                    src="./assets/ArrowLeft.svg"
+                    alt="arrowLeft"
+                  />
                 </button>
               </div>
             </div>
 
-            <div class="absolute bottom-10 right-10">
+            <div class="lg:absolute bottom-10 right-10">
               <img src="./assets/homepage_4.svg" alt="x" width="75" />
             </div>
           </div>
@@ -646,16 +665,12 @@
                     <a href="" class="font-secondary text-primary-grey">News</a>
                   </li>
                   <li>
-                    <a
-                      href="/solax/successStories.html"
-                      class="font-secondary text-primary-grey"
+                    <a href="" class="font-secondary text-primary-grey"
                       >Success Stories</a
                     >
                   </li>
                   <li>
-                    <a
-                      href="/solax/Event/event.html"
-                      class="font-secondary text-primary-grey"
+                    <a href="" class="font-secondary text-primary-grey"
                       >Events</a
                     >
                   </li>

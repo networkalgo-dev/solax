@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../style.css" />
     <title>News inner page</title>
   </head>
   <body class="bg-primary-black">
@@ -75,11 +76,11 @@
     <!-- main -->
     <main>
       <!-- first section -->
-      <section class="bg-primary-white py-24">
+      <section class="bg-primary-white xl:py-24 md:py-16 py-10">
         <div
           class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
-          <div class="px-24">
+          <div class="md:px-24">
             <div class="flex flex-col items-center gap-4">
               <div class="flex gap-4 items-center">
                 <span
@@ -92,12 +93,12 @@
               </div>
 
               <h2
-                class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center lg:max-w-[80%]"
+                class="font-primary font-medium text-4xl xl:text-6xl xl:leading-[70px] text-primary-black font-medium text-center lg:max-w-[80%]"
               >
                 RE+ TEXAS 2024 –SolaX Made a Significant Splash in USA
               </h2>
 
-              <div class="py-8 border-b border-[#C8C8C8] w-full">
+              <div class="xl:py-8 py-5 border-b border-[#C8C8C8] w-full">
                 <img
                   class="w-full"
                   src="../assets/news/news_inner_1.png"
@@ -209,7 +210,7 @@
               </div>
             </div>
 
-            <div class="pt-8 flex justify-between">
+            <div class="pt-8 flex justify-between items-center">
               <div class="">
                 <span class="font-primary text-primary-black font-medium"
                   >Share this News</span
@@ -256,7 +257,7 @@
       </section>
 
       <!-- second section -->
-      <section class="py-24">
+      <section class="xl:py-24 md:py-16 py-10">
         <div
           class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
@@ -267,14 +268,13 @@
               More News
             </h2>
 
-            <ul class="grid grid-cols-3 gap-x-4 gap-y-8">
+            <ul
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"
+            >
               <li>
-                <a
-                  class="flex flex-col gap-4"
-                  href="/solax/news/newsInner.html"
-                >
+                <a class="flex flex-col gap-4" href="">
                   <div class="flex flex-col gap-4">
-                    <div>
+                    <div class="mx-auto">
                       <img src="../assets/blog/blog_1.png" alt="blog_pic" />
                     </div>
                     <div class="flex gap-4 items-center">
@@ -303,12 +303,9 @@
                 </a>
               </li>
               <li>
-                <a
-                  class="flex flex-col gap-4"
-                  href="/solax/news/newsInner.html"
-                >
+                <a class="flex flex-col gap-4" href="">
                   <div class="flex flex-col gap-4">
-                    <div>
+                    <div class="mx-auto">
                       <img src="../assets/blog/blog_2.png" alt="blog_pic" />
                     </div>
                     <div class="flex gap-4 items-center">
@@ -337,12 +334,9 @@
                 </a>
               </li>
               <li>
-                <a
-                  class="flex flex-col gap-4"
-                  href="/solax/news/newsInner.html"
-                >
+                <a class="flex flex-col gap-4" href="">
                   <div class="flex flex-col gap-4">
-                    <div>
+                    <div class="mx-auto">
                       <img src="../assets/blog/blog_3.png" alt="blog_pic" />
                     </div>
                     <div class="flex gap-4 items-center">
@@ -376,14 +370,14 @@
       </section>
 
       <!-- third section -->
-      <section class="py-24">
+      <section class="xl:py-24 md:py-16 py-10">
         <div
           class="default_container sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
           <div
-            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
+            class="bg-gradient-to-r from-[#EEBB0C] to-[#EF6818] py-10 px-[40px] md:px-[90px] flex flex-col-reverse gap-10 lg:flex-row justify-between items-center"
           >
-            <div class="flex flex-col gap-10 lg:max-w-[35%]">
+            <div class="flex flex-col gap-10 lg:max-w-[45%] xl:max-w-[35%]">
               <div class="flex flex-col gap-4">
                 <h3
                   class="font-primary text-4xl font-medium text-primary-black"
@@ -426,7 +420,7 @@
       </section>
 
       <!-- footer -->
-      <footer class="pt-24">
+      <footer class="lg:pt-24">
         <div
           class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
         >
@@ -640,5 +634,6 @@
       </footer>
     </main>
     <script src="../tailwindConfig.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

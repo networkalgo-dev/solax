@@ -134,7 +134,7 @@
                 Lorem ipsum dolor sit amet
               </h1>
               <p
-                class="font-secondary font-medium text-lg lg:text-xl text-primary-white max-w-[50%] text-center"
+                class="font-secondary font-medium text-lg lg:text-xl text-primary-white lg:max-w-[50%] text-center"
               >
                 Forward-Thinking, Superior Quality, Integrity, Collaborative
                 Advantage
@@ -161,7 +161,7 @@
             >
               Leading Supplier of Solar Solutions
             </h2>
-            <p class="font-secondary text-primary-black max-w-[72%]">
+            <p class="font-secondary text-primary-black md:max-w-[72%]">
               Established in 2012, we are a National High-tech Enterprise with
               strong R&D strengths that integrates R&D, production, sales and
               service as one, and has been authorized over 100 national patents
@@ -171,7 +171,7 @@
             </p>
           </div>
 
-          <div class="flex gap-5">
+          <div class="flex flex-col md:flex-row gap-5">
             <div><img src="./assets/about_us/abtUs_1.png" alt="abtUs_1" /></div>
             <div class="grow">
               <img src="./assets/about_us/abtUs_2.png" alt="abtUs_2" />
@@ -197,7 +197,7 @@
             >
               Our Mission
             </h2>
-            <p class="font-secondary text-primary-white max-w-[22%]">
+            <p class="font-secondary text-primary-white md:max-w-[22%]">
               Innovating accurately and swiftly to ensure a sustainable, greener
               future.
             </p>
@@ -218,11 +218,11 @@
               >GLOBAL REACH</span
             >
             <h2
-              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black max-w-[60%]"
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black md:max-w-[60%]"
             >
               Global Leader in Smart Energy Solutions
             </h2>
-            <p class="font-secondary text-primary-black max-w-[75%]">
+            <p class="font-secondary text-primary-black md:max-w-[75%]">
               SolaX Power envisions a clean, sustainable future powered by solar
               energy. As a global leader in solar solutions and Asia's first
               hybrid inverter manufacturer, SolaX has grown into a multinational
@@ -235,11 +235,15 @@
           </div>
 
           <div class="relative">
-            <div>
-              <img src="./assets/about_us/abtUs_4.webp" alt="abtUs_4" />
+            <div class="">
+              <img
+                class="w-full"
+                src="./assets/about_us/abtUs_4.webp"
+                alt="abtUs_4"
+              />
             </div>
             <div
-              class="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] flex items-end pb-10"
+              class="absolute left-0 top-0 w-full h-full bg-gradient-to-b from-[#15151500] to-[#151515] flex items-center lg:items-end lg:pb-10"
             >
               <div class="absolute right-8 top-8">
                 <img
@@ -250,7 +254,9 @@
                 />
               </div>
 
-              <ul class="flex justify-between w-2/3 mx-auto">
+              <ul
+                class="grid grid-cols-2 gap-2 lg:flex justify-between lg:w-2/3 lg:mx-auto"
+              >
                 <li class="flex flex-col items-center gap-2">
                   <div>
                     <img
@@ -260,11 +266,13 @@
                   </div>
                   <div>
                     <h4
-                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                      class="font-secondary font-bold lg:text-xl text-center text-primary-white"
                     >
                       2000+
                     </h4>
-                    <p class="font-secondary text-primary-white text-center">
+                    <p
+                      class="font-secondary text-xs lg:text-base text-primary-white text-center"
+                    >
                       Employees
                     </p>
                   </div>
@@ -278,11 +286,13 @@
                   </div>
                   <div>
                     <h4
-                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                      class="font-secondary font-bold lg:text-xl text-center text-primary-white"
                     >
                       400+
                     </h4>
-                    <p class="font-secondary text-primary-white text-center">
+                    <p
+                      class="font-secondary text-xs lg:text-base text-primary-white text-center"
+                    >
                       R&D Staff
                     </p>
                   </div>
@@ -293,11 +303,13 @@
                   </div>
                   <div>
                     <h4
-                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                      class="font-secondary font-bold lg:text-xl text-center text-primary-white"
                     >
                       4
                     </h4>
-                    <p class="font-secondary text-primary-white text-center">
+                    <p
+                      class="font-secondary text-xs lg:text-base text-primary-white text-center"
+                    >
                       R&D Centers
                     </p>
                   </div>
@@ -308,12 +320,12 @@
                   </div>
                   <div>
                     <h4
-                      class="font-secondary font-bold text-xl text-center text-primary-white"
+                      class="font-secondary font-bold lg:text-xl text-center text-primary-white"
                     >
                       80+
                     </h4>
                     <p
-                      class="font-secondary text-primary-white text-center font-light"
+                      class="font-secondary text-xs lg:text-base text-primary-white text-center font-light"
                     >
                       Global Markets
                     </p>
@@ -331,25 +343,33 @@
       <div
         class="default_container max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
       >
-        <div class="flex flex-col gap-24">
+        <div class="flex flex-col gap-8 lg:gap-24">
           <div class="flex flex-col items-center gap-4">
             <span
               class="font-primary text-lg text-primary-orange font-medium uppercase"
               >Truly Global</span
             >
             <h2
-              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-white"
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-white text-center"
             >
               Headquarter & Branches
             </h2>
           </div>
+          <!-- for responsive -->
+          <div class="lg:hidden">
+            <div>
+              <img src="./assets/about_us/MapwithPins.webp" alt="abtUs_map" />
+            </div>
+          </div>
 
-          <div class="relative">
+          <div class="relative hidden lg:block">
             <div>
               <img src="./assets/about_us/abtUs_map.svg" alt="abtUs_map" />
             </div>
             <ul>
-              <li class="absolute top-[24%] left-[130px] group">
+              <li
+                class="absolute top-[24%] left-[88px] 2xl:top-[24%] xl:left-[115px] 2xl:left-[130px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -378,7 +398,9 @@
                 </div>
               </li>
 
-              <li class="absolute top-[18%] left-[520px] group">
+              <li
+                class="absolute top-[18%] left-[360px] xl:left-[470px] 2xl:left-[520px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -407,7 +429,9 @@
                 </div>
               </li>
 
-              <li class="absolute top-[20%] left-[550px] group">
+              <li
+                class="absolute top-[20%] left-[390px] xl:left-[500px] 2xl:left-[550px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -436,7 +460,9 @@
                 </div>
               </li>
 
-              <li class="absolute top-[23%] left-[580px] group">
+              <li
+                class="absolute top-[24%] left-[420px] xl:left-[530px] 2xl:left-[580px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -465,7 +491,9 @@
                 </div>
               </li>
 
-              <li class="absolute top-[36%] right-[310px] group">
+              <li
+                class="absolute top-[36%] right-[220px] xl:right-[280px] 2xl:right-[310px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -494,7 +522,9 @@
                 </div>
               </li>
 
-              <li class="absolute top-[32%] right-[245px] group">
+              <li
+                class="absolute top-[32%] right-[170px] xl:right-[230px] 2xl:right-[245px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -523,7 +553,9 @@
                 </div>
               </li>
 
-              <li class="absolute bottom-[14%] right-[135px] group">
+              <li
+                class="absolute bottom-[14%] right-[90px] xl:right-[115px] 2xl:right-[135px] group"
+              >
                 <div
                   class="w-5 h-5 bg-primary-yellow rounded-full flex items-center justify-center cursor-pointer"
                 >
@@ -569,18 +601,22 @@
               >pushing ahead</span
             >
             <h2
-              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center max-w-[40%]"
+              class="font-primary font-medium text-4xl lg:text-6xl lg:leading-[70px] text-primary-black font-medium text-center lg:max-w-[60%]"
             >
               Our Journey in Energy Storage
             </h2>
           </div>
 
-          <div class="bg-[#F5F5F5] border border-[#C8C8C8] p-10">
+          <div class="bg-[#F5F5F5] border border-[#C8C8C8] p-5 lg:p-10">
             <div class="swiper slider">
               <!-- 1 -->
               <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -604,8 +640,12 @@
                   </div>
                 </div>
                 <!-- 2 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -629,8 +669,12 @@
                   </div>
                 </div>
                 <!-- 3 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -654,8 +698,12 @@
                   </div>
                 </div>
                 <!-- 4 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -679,8 +727,12 @@
                   </div>
                 </div>
                 <!-- 5 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -704,8 +756,12 @@
                   </div>
                 </div>
                 <!-- 6 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -729,8 +785,12 @@
                   </div>
                 </div>
                 <!-- 7 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -754,8 +814,12 @@
                   </div>
                 </div>
                 <!-- 8 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -780,7 +844,9 @@
                 </div>
                 <!-- 9 -->
                 <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -804,8 +870,12 @@
                   </div>
                 </div>
                 <!-- 10 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -829,8 +899,12 @@
                   </div>
                 </div>
                 <!-- 11 -->
-                <div class="swiper-slide flex justify-between">
-                  <div class="w-[40%] flex flex-col justify-between pt-20">
+                <div
+                  class="swiper-slide flex flex-col-reverse lg:flex-row justify-between"
+                >
+                  <div
+                    class="lg:w-[40%] flex flex-col justify-between pt-10 lg:pt-20"
+                  >
                     <p
                       class="font-secondary font-medium text-lg text-primary-black"
                     >
@@ -859,7 +933,7 @@
                 class="swiper-pagination-progressbar swiper-pagination !static mt-10"
               ></div>
               <div
-                class="swiper-pagination-bullets swiper-pagination !static !w-full flex justify-between mt-10"
+                class="swiper-pagination-bullets swiper-pagination !static !w-full flex gap-8 justify-between mt-10 overflow-scroll lg:overflow-auto"
               ></div>
             </div>
           </div>
@@ -900,18 +974,12 @@
                   <a href="" class="font-secondary text-primary-grey">News</a>
                 </li>
                 <li>
-                  <a
-                    href="/solax/successStories.html"
-                    class="font-secondary text-primary-grey"
+                  <a href="" class="font-secondary text-primary-grey"
                     >Success Stories</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/solax/Event/event.html"
-                    class="font-secondary text-primary-grey"
-                    >Events</a
-                  >
+                  <a href="" class="font-secondary text-primary-grey">Events</a>
                 </li>
                 <li>
                   <a href="" class="font-secondary text-primary-grey"
